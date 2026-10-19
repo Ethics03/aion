@@ -71,9 +71,17 @@ Artifact builds use Mozilla's precompiled native components. Changes to C++, Rus
 ```text
 aion/
 ├── README.md
+├── src/
+│   ├── aion/         # Aion features and interface
+│   └── browser/      # Patches to Firefox browser files
+├── prefs/            # Default browser preferences
+├── configs/          # Shared build configuration
+├── scripts/          # Setup and development helpers
 ├── docs/             # Development documentation
 └── engine/           # Local Firefox checkout, excluded from Aion's Git history
 ```
+
+The `src/`, `prefs/`, `configs/`, and `scripts/` directories currently contain placeholders. They do not affect the Firefox build until the corresponding implementation and tooling are added.
 
 Within `engine/`, the main frontend directories are:
 
