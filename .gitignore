@@ -1,0 +1,11 @@
+# Local Firefox checkout
+/engine/
+
+# Dependencies and build output
+node_modules/
+__pycache__/
+/dist/
+/target/
+
+# Local development profile
+/.dev-profile/
