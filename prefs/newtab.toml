@@ -1,0 +1,101 @@
+# Default stories and shortcuts to off.
+[[pref]]
+name = "browser.newtabpage.activity-stream.feeds.section.topstories"
+value = false
+
+[[pref]]
+name = "browser.newtabpage.activity-stream.feeds.topsites"
+value = false
+
+# Keep current Firefox widgets off; availability follows upstream defaults.
+[[pref]]
+name = "browser.newtabpage.activity-stream.widgets.enabled"
+value = false
+
+# Disable weather availability in both legacy and Nova interfaces.
+[[pref]]
+name = "browser.newtabpage.activity-stream.showWeather"
+value = false
+
+[[pref]]
+name = "browser.newtabpage.activity-stream.system.showWeather"
+value = false
+
+[[pref]]
+name = "browser.newtabpage.activity-stream.widgets.weather.enabled"
+value = false
+
+[[pref]]
+name = "browser.newtabpage.activity-stream.widgets.system.weather.enabled"
+value = false
+
+# Keep remote-data and search-history widgets off until selected.
+[[pref]]
+name = "browser.newtabpage.activity-stream.widgets.stocks.enabled"
+value = false
+
+[[pref]]
+name = "browser.newtabpage.activity-stream.widgets.pictureOfTheDay.enabled"
+value = false
+
+[[pref]]
+name = "browser.newtabpage.activity-stream.widgets.recentSearches.enabled"
+value = false
+
+[[pref]]
+name = "browser.newtabpage.activity-stream.widgets.travel.enabled"
+value = false
+
+# Sponsored content defaults to off without locking user preferences.
+[[pref]]
+name = "browser.newtabpage.activity-stream.showSponsored"
+value = false
+
+[[pref]]
+name = "browser.newtabpage.activity-stream.system.showSponsored"
+value = false
+
+[[pref]]
+name = "browser.newtabpage.activity-stream.showSponsoredTopSites"
+value = false
+
+[[pref]]
+name = "browser.newtabpage.activity-stream.unifiedAds.tiles.enabled"
+value = false
+
+[[pref]]
+name = "browser.newtabpage.activity-stream.feeds.adsfeed"
+value = false
+
+[[pref]]
+name = "browser.topsites.contile.enabled"
+value = false
+
+[[pref]]
+name = "browser.newtabpage.activity-stream.showSponsoredCheckboxes"
+value = false
+
+[[pref]]
+name = "browser.topsites.useRemoteSetting"
+value = false
+
+# Disable new-tab reporting and promotional messages separately from the UI.
+[[pref]]
+name = "browser.newtabpage.activity-stream.feeds.telemetry"
+value = false
+locked = true
+
+[[pref]]
+name = "browser.newtabpage.activity-stream.telemetry"
+value = false
+locked = true
+
+[[pref]]
+name = "browser.newtabpage.activity-stream.telemetry.privatePing.enabled"
+value = false
+locked = true
+
+[[pref]]
+name = "browser.newtabpage.activity-stream.feeds.newtabmessaging"
+value = false
+locked = true
