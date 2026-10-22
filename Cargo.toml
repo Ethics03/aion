@@ -1,0 +1,4 @@
+[workspace]
+members = ["tools/prefs"]
+exclude = ["engine"]
+resolver = "3"
