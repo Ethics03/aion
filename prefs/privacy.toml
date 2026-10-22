@@ -1,0 +1,95 @@
+# These overrides target runtime defaults. Verify reporting behavior after
+# integrating them into Firefox; they do not remove compiled components.
+
+# Disable submission through Firefox's data reporting policy.
+[[pref]]
+name = "datareporting.policy.dataSubmissionEnabled"
+value = false
+locked = true
+
+# Disable telemetry upload, including Glean's normal upload control.
+[[pref]]
+name = "datareporting.healthreport.uploadEnabled"
+value = false
+locked = true
+
+# Usage reporting has a separate upload control.
+[[pref]]
+name = "datareporting.usage.uploadEnabled"
+value = false
+locked = true
+
+# Disable extended telemetry and unified telemetry behavior.
+[[pref]]
+name = "toolkit.telemetry.enabled"
+value = false
+locked = true
+
+[[pref]]
+name = "toolkit.telemetry.unified"
+value = false
+locked = true
+
+[[pref]]
+name = "toolkit.telemetry.server"
+value = "data:,"
+locked = true
+
+# Disable local ping archives and optional legacy ping producers.
+[[pref]]
+name = "toolkit.telemetry.archive.enabled"
+value = false
+locked = true
+
+[[pref]]
+name = "toolkit.telemetry.newProfilePing.enabled"
+value = false
+locked = true
+
+[[pref]]
+name = "toolkit.telemetry.firstShutdownPing.enabled"
+value = false
+locked = true
+
+[[pref]]
+name = "toolkit.telemetry.shutdownPingSender.enabled"
+value = false
+locked = true
+
+[[pref]]
+name = "toolkit.telemetry.bhrPing.enabled"
+value = false
+locked = true
+
+# Disable Normandy, Shield study enrollment, and Nimbus feature rollouts.
+[[pref]]
+name = "app.normandy.enabled"
+value = false
+
+[[pref]]
+name = "app.normandy.api_url"
+value = ""
+locked = true
+
+[[pref]]
+name = "app.shield.optoutstudies.enabled"
+value = false
+locked = true
+
+[[pref]]
+name = "nimbus.rollouts.enabled"
+value = false
+locked = true
+
+# Enable Global Privacy Control and default crash submission to off.
+[[pref]]
+name = "privacy.globalprivacycontrol.enabled"
+value = true
+
+[[pref]]
+name = "browser.tabs.crashReporting.sendReport"
+value = false
+
+[[pref]]
+name = "browser.crashReports.unsubmittedCheck.autoSubmit2"
+value = false
