@@ -12,6 +12,8 @@ Install Git, Python 3.10 or newer, and curl. Follow Mozilla's requirements for y
 
 Mozilla's bootstrap script installs the remaining development dependencies. The commands below use a Unix shell; on Windows, use the environment described in Mozilla's guide.
 
+Install [Bun](https://bun.sh/docs/installation) for Aion's root development scripts. Use the version specified in `package.json`. Firefox's dependencies are managed separately inside `engine/`.
+
 ## Setup
 
 Clone the repository:
@@ -68,6 +70,20 @@ cd engine
 ```
 
 Artifact builds use Mozilla's precompiled native components. Changes to Firefox's C++, Rust, WebIDL, or some build definitions require a different build workflow. See [artifact build support and restrictions](https://firefox-source-docs.mozilla.org/contributing/build/artifact_builds.html).
+
+## Git hooks
+
+From the repository root, install the pinned development dependencies and enable Husky:
+
+```sh
+bun install --frozen-lockfile
+```
+
+Before commits, the hooks check staged whitespace and Rust formatting. Before pushes, they run Clippy and the Rust tests. Checks do not modify or stage files. Rust checks cover Aion's Cargo workspace, which excludes `engine/`.
+
+Run all Rust checks with `bun run check`, or run `bun run format:check`, `bun run lint`, and `bun run test` individually. Use `bun run format` to format Rust code, or `bun run prepare` to reinstall the hooks. Husky runs with Bun directly. Commit `bun.lock` when root dependencies change.
+
+In CI, use `HUSKY=0 bun install --frozen-lockfile` to skip local hook installation, then run `bun run check`. Root scripts currently cover Aion's Rust tooling; browser tests still use Mach.
 
 ## Rust tooling
 
@@ -137,6 +153,8 @@ Some preferences, including `toolkit.telemetry.enabled`, are also assigned by na
 ```text
 aion/
 ├── README.md
+├── package.json      # Development scripts and hook dependency
+├── bun.lock          # Pinned JavaScript dependencies
 ├── Cargo.toml        # Workspace for Aion's Rust tools
 ├── Cargo.lock        # Pinned tool dependencies
 ├── tools/
