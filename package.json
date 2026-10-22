@@ -1,0 +1,16 @@
+{
+  "name": "aion",
+  "private": true,
+  "packageManager": "bun@1.4.3",
+  "scripts": {
+    "prepare": "bun run --bun husky",
+    "format": "cargo fmt --all",
+    "format:check": "cargo fmt --all -- --check",
+    "lint": "cargo clippy --workspace --all-targets --locked -- -D warnings",
+    "test": "cargo test --workspace --locked",
+    "check": "bun run format:check && bun run lint && bun run test"
+  },
+  "devDependencies": {
+    "husky": "9.1.7"
+  }
+}
